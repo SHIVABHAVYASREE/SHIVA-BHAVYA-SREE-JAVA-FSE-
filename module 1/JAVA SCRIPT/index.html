@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Community Event Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="main.js"></script>
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">CommunityEvents</a>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#register">Register</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="help.html" target="_blank">Help</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home">
+            <div id="welcomeBanner" class="gradient-bg">
+                <div class="container">
+                    <h1 class="welcome-heading">Welcome to the Community Event Portal</h1>
+                    <p data-aos="fade-up" data-aos-delay="300">Find and register for exciting local events in your area.</p>
+                    <p class="special-offer float" data-aos="zoom-in" data-aos-delay="600">Special offer: Register today and get a free gift!</p>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="intro-cards">
+                    <div class="intro-card card-hover" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h3>Discover Events</h3>
+                        <p>Browse through our curated collection of local community events.</p>
+                    </div>
+                    <div class="intro-card card-hover" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-ticket-alt"></i>
+                        <h3>Easy Registration</h3>
+                        <p>Quick and simple event registration process for all residents.</p>
+                    </div>
+                    <div class="intro-card card-hover" data-aos="fade-up" data-aos-delay="500">
+                        <i class="fas fa-users"></i>
+                        <h3>Connect</h3>
+                        <p>Meet like-minded people and build community connections.</p>
+                    </div>
+                </div>
+                
+                <p data-aos="fade-up">Our portal helps residents connect with <span class="highlight">local events</span> and services.</p>
+                
+                <div class="location-container" data-aos="fade-up">
+                    <button id="findNearbyEvents" class="btn btn-hover-effect ripple">
+                        <i class="fas fa-map-marker-alt"></i> Find Nearby Events
+                    </button>
+                    <div id="locationDisplay"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Events Section -->
+        <section id="events">
+            <div class="container">
+                <div class="event-filters" data-aos="fade-up">
+                    <h3>Filter Events</h3>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">All Events</button>
+                        <button class="filter-btn" data-filter="festival">Festivals</button>
+                        <button class="filter-btn" data-filter="art">Art</button>
+                        <button class="filter-btn" data-filter="food">Food</button>
+                        <button class="filter-btn" data-filter="music">Music</button>
+                        <button class="filter-btn" data-filter="sports">Sports</button>
+                        <button class="filter-btn" data-filter="charity">Charity</button>
+                    </div>
+                </div>
+                
+                <h2>Community Events</h2>
+                
+                <div class="gallery stagger-reveal" id="eventGallery">
+                    <div class="gallery-item card-hover" data-aos="fade-up">
+                        <div class="event-date">
+                            <span class="month">JUN</span>
+                            <span class="day">15</span>
+                        </div>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0eIzp87I7U5RQZMuNYkVA698HeHgEJ1rHTA&s" alt="Summer Festival" class="event-image">
+                        <div class="gallery-caption">
+                            <h3>Summer Festival</h3>
+                            <p>Annual celebration with music, food, and activities for all ages.</p>
+                            <div class="event-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Central Park</span>
+                                <span><i class="fas fa-clock"></i> 10:00 AM - 8:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item card-hover" data-aos="fade-up" data-aos-delay="100">
+                        <div class="event-date">
+                            <span class="month">JUL</span>
+                            <span class="day">22</span>
+                        </div>
+                        <img src="https://images.pexels.com/photos/16037756/pexels-photo-16037756/free-photo-of-exhibition-of-modern-art.jpeg" alt="Art Exhibition" class="event-image">
+                        <div class="gallery-caption">
+                            <h3>Art Exhibition</h3>
+                            <p>Showcasing local artists and their creative masterpieces.</p>
+                            <div class="event-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> City Gallery</span>
+                                <span><i class="fas fa-clock"></i> 9:00 AM - 6:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item card-hover" data-aos="fade-up" data-aos-delay="200">
+                        <div class="event-date">
+                            <span class="month">AUG</span>
+                            <span class="day">05</span>
+                        </div>
+                        <img src="data:image/jpeg;base64,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" alt="Food Fair" class="event-image">
+                        <div class="gallery-caption">
+                            <h3>Food Fair</h3>
+                            <p>Taste delicious cuisines from around the world.</p>
+                            <div class="event-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Riverside Plaza</span>
+                                <span><i class="fas fa-clock"></i> 11:00 AM - 9:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item card-hover" data-aos="fade-up" data-aos-delay="300">
+                        <div class="event-date">
+                            <span class="month">SEP</span>
+                            <span class="day">18</span>
+                        </div>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ32dznlri36E1vCjcshAJzdQdlKS_SVKC_A&s" alt="Music Concert" class="event-image">
+                        <div class="gallery-caption">
+                            <h3>Music Concert</h3>
+                            <p>Live performances from top local and national artists.</p>
+                            <div class="event-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Community Hall</span>
+                                <span><i class="fas fa-clock"></i> 7:00 PM - 11:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item card-hover" data-aos="fade-up" data-aos-delay="400">
+                        <div class="event-date">
+                            <span class="month">OCT</span>
+                            <span class="day">09</span>
+                        </div>
+                        <img src="https://arunachaltimes.in/wp-content/uploads/2024/08/rgu-sports-day.webp" alt="Sports Day" class="event-image">
+                        <div class="gallery-caption">
+                            <h3>Sports Day</h3>
+                            <p>Competitive and fun sports activities for all skill levels.</p>
+                            <div class="event-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Sports Complex</span>
+                                <span><i class="fas fa-clock"></i> 9:00 AM - 5:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item card-hover" data-aos="fade-up" data-aos-delay="500">
+                        <div class="event-date">
+                            <span class="month">NOV</span>
+                            <span class="day">12</span>
+                        </div>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4S-FrJnWqaRkaI3czHwmZjZT8NICb83GwGg&s" alt="Charity Run" class="event-image">
+                        <div class="gallery-caption">
+                            <h3>Charity Run</h3>
+                            <p>Run for a cause and support local community initiatives.</p>
+                            <div class="event-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Memorial Park</span>
+                                <span><i class="fas fa-clock"></i> 8:00 AM - 12:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="event-filters" data-aos="fade-up">
+                    <h3>Filter Events</h3>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">All Events</button>
+                        <button class="filter-btn" data-filter="festival">Festivals</button>
+                        <button class="filter-btn" data-filter="art">Art</button>
+                        <button class="filter-btn" data-filter="food">Food</button>
+                        <button class="filter-btn" data-filter="music">Music</button>
+                        <button class="filter-btn" data-filter="sports">Sports</button>
+                        <button class="filter-btn" data-filter="charity">Charity</button>
+                    </div>
+                </div>
+                
+                <div class="video-container">
+                    <h3>Event Promo Video</h3>
+                    <iframe id="promoVideo" width="100%" height="400" 
+                        src="https://www.youtube.com/embed/4-Eg5J63X2c" 
+                        title="Concert Promo Video" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen onload="videoReady()"></iframe>
+                    <p id="videoMessage"></p>
+                </div>
+                
+                <script>
+                    function videoReady() {
+                        document.getElementById('videoMessage').textContent = "Video ready to play";
+                    }
+                    
+                    window.addEventListener('beforeunload', function(e) {
+                        const form = document.getElementById('registrationForm');
+                        if (form && form.querySelector('input:not([type="submit"]):not([type="button"]):not([type="reset"])').value) {
+                            e.preventDefault();
+                            e.returnValue = 'You have unsaved changes. Are you sure you want to leave?';
+                            return e.returnValue;
+                        }
+                    });
+                </script>
+            </div>
+        </section>
+        
+        <!-- Registration Section -->
+        <section id="register" style="background-color: #f0f5fa;">
+            <div class="container">
+                <h2>Event Registration</h2>
+                
+                <div class="form-container">
+                    <form id="registrationForm">
+                        <div class="form-group">
+                            <label for="name">Full Name:</label>
+                            <input type="text" id="name" name="name" required autofocus>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number:</label>
+                            <input type="tel" id="phone" name="phone" placeholder="123-456-7890">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="date">Event Date:</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="eventType">Event Type:</label>
+                            <select id="eventType" name="eventType" required>
+                                <option value="">-- Select Event Type --</option>
+                                <option value="festival">Festival</option>
+                                <option value="workshop">Workshop</option>
+                                <option value="concert">Concert</option>
+                                <option value="sports">Sports</option>
+                                <option value="charity">Charity</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Additional Information:</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Any special requirements or questions?"></textarea>
+                            <div class="char-counter">Characters: <span id="charCount">0</span></div>
+                        </div>
+                        
+                        <div class="fee-display">
+                            <p>Event Fee: <span id="eventFee">$0</span></p>
+                        </div>
+                        
+                        <div class="form-group" style="display: flex; gap: 10px;">
+                            <button type="submit" id="submitBtn" class="btn">Register Now</button>
+                            <button type="button" id="clearPreferences" class="btn btn-secondary">Clear Preferences</button>
+                        </div>
+                        
+                        <output id="formOutput"></output>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                
+                <div class="form-container">
+                    <form id="feedbackForm">
+                        <div class="form-group">
+                            <label for="feedbackName">Your Name:</label>
+                            <input type="text" id="feedbackName" name="feedbackName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="feedbackEmail">Email Address:</label>
+                            <input type="email" id="feedbackEmail" name="feedbackEmail" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="feedbackMessage">Your Message:</label>
+                            <textarea id="feedbackMessage" name="feedbackMessage" rows="4" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="submit" class="btn">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <!-- Newsletter Section -->
+    <section class="newsletter-section parallax" style="background-image: url('https://source.unsplash.com/random/1600x800/?community');">
+        <div class="container">
+            <div class="newsletter-content" data-aos="fade-up">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to our newsletter to receive updates about upcoming events and community news.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-hover-effect">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section" data-aos="fade-up" data-aos-delay="100">
+                <h3>About Us</h3>
+                <p>We connect local residents with community events and services to build a stronger, more engaged community.</p>
+            </div>
+            
+            <div class="footer-section" data-aos="fade-up" data-aos-delay="200">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#register">Register</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section" data-aos="fade-up" data-aos-delay="300">
+                <h3>Connect With Us</h3>
+                <ul class="social-links">
+                    <li><a href="#" class="social-icon"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#" class="social-icon"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#" class="social-icon"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2025 Local Community Event Portal. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                easing: 'ease',
+                once: true
+            });
+            
+            // Activate scroll animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            });
+            
+            document.querySelectorAll('.stagger-reveal, .reveal').forEach(el => {
+                observer.observe(el);
+            });
+            
+            // Load saved preferences
+            const savedEventType = localStorage.getItem('preferredEventType');
+            if (savedEventType) {
+                document.getElementById('eventType').value = savedEventType;
+                updateEventFee(savedEventType);
+            }
+            
+            // Event image enlargement on double-click
+            const images = document.querySelectorAll('.event-image');
+            images.forEach(img => {
+                img.addEventListener('dblclick', function() {
+                    const galleryItem = this.closest('.gallery-item');
+                    if (galleryItem.classList.contains('expanded')) {
+                        galleryItem.classList.remove('expanded');
+                        galleryItem.style.gridColumn = '';
+                        galleryItem.style.gridRow = '';
+                    } else {
+                        galleryItem.classList.add('expanded');
+                        galleryItem.style.gridColumn = 'span 2';
+                        galleryItem.style.gridRow = 'span 2';
+                    }
+                });
+            });
+            
+            // Event filtering
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    // Show/hide gallery items based on filter
+                    galleryItems.forEach(item => {
+                        if (filterValue === 'all') {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'scale(1)';
+                            }, 100);
+                        } else {
+                            // Check if item has the filter class
+                            const itemType = item.querySelector('img').getAttribute('alt').toLowerCase();
+                            if (itemType.includes(filterValue)) {
+                                item.style.display = 'block';
+                                setTimeout(() => {
+                                    item.style.opacity = '1';
+                                    item.style.transform = 'scale(1)';
+                                }, 100);
+                            } else {
+                                item.style.opacity = '0';
+                                item.style.transform = 'scale(0.8)';
+                                setTimeout(() => {
+                                    item.style.display = 'none';
+                                }, 300);
+                            }
+                        }
+                    });
+                });
+            });
+            
+            // Phone validation on blur
+            document.getElementById('phone').addEventListener('blur', function() {
+                const phonePattern = /^\d{3}-\d{3}-\d{4}$/;
+                if (!phonePattern.test(this.value) && this.value !== '') {
+                    alert('Please enter phone number in format: 123-456-7890');
+                    this.classList.add('error');
+                } else {
+                    this.classList.remove('error');
+                }
+            });
+            
+            // Event type change handler
+            document.getElementById('eventType').addEventListener('change', function() {
+                const selectedEventType = this.value;
+                localStorage.setItem('preferredEventType', selectedEventType);
+                updateEventFee(selectedEventType);
+            });
+            
+            // Character counter for message textarea
+            document.getElementById('message').addEventListener('keyup', function() {
+                const count = this.value.length;
+                document.getElementById('charCount').textContent = count;
+                
+                // Visual feedback on character count
+                if (count > 200) {
+                    document.getElementById('charCount').style.color = '#dc3545';
+                } else {
+                    document.getElementById('charCount').style.color = '#6c757d';
+                }
+            });
+            
+            // Form submission handler
+            document.getElementById('registrationForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const name = document.getElementById('name').value;
+                const output = document.getElementById('formOutput');
+                output.textContent = `Thank you, ${name}! Your registration has been received.`;
+                output.style.display = 'block';
+                
+                // Scroll to the output message
+                output.scrollIntoView({ behavior: 'smooth' });
+            });
+            
+            // Submit button click handler
+            document.getElementById('submitBtn').addEventListener('click', function() {
+                console.log('Form submitted');
+            });
+            
+            // Clear preferences button
+            document.getElementById('clearPreferences').addEventListener('click', function() {
+                localStorage.clear();
+                sessionStorage.clear();
+                document.getElementById('eventType').value = '';
+                document.getElementById('eventFee').textContent = '$0';
+                alert('All preferences cleared!');
+            });
+            
+            // Video ready event
+            const video = document.getElementById('promoVideo');
+            video.addEventListener('canplay', function() {
+                document.getElementById('videoMessage').textContent = 'Video ready to play';
+                document.getElementById('videoMessage').classList.add('fade-in');
+            });
+            
+            // Geolocation handler
+            document.getElementById('findNearbyEvents').addEventListener('click', function() {
+                const locationDisplay = document.getElementById('locationDisplay');
+                locationDisplay.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Locating...';
+                locationDisplay.style.display = 'block';
+                
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(
+                        // Success callback
+                        function(position) {
+                            const lat = position.coords.latitude;
+                            const lon = position.coords.longitude;
+                            locationDisplay.innerHTML = 
+                                `<i class="fas fa-check-circle"></i> Your location: ${lat.toFixed(4)}, ${lon.toFixed(4)}<br>
+                                <span class="highlight">Finding events near you...</span>`;
+                        },
+                        // Error callback
+                        function(error) {
+                            let message = '<i class="fas fa-exclamation-triangle"></i> Unable to retrieve your location: ';
+                            switch(error.code) {
+                                case error.PERMISSION_DENIED:
+                                    message += 'Location permission denied.';
+                                    break;
+                                case error.POSITION_UNAVAILABLE:
+                                    message += 'Location information unavailable.';
+                                    break;
+                                case error.TIMEOUT:
+                                    message += 'Request timed out.';
+                                    break;
+                            }
+                            locationDisplay.innerHTML = message;
+                        },
+                        // Options
+                        {
+                            enableHighAccuracy: true,
+                            timeout: 5000,
+                            maximumAge: 0
+                        }
+                    );
+                } else {
+                    locationDisplay.innerHTML = '<i class="fas fa-exclamation-circle"></i> Geolocation is not supported by your browser';
+                }
+            });
+            
+            // Function to update event fee based on selection
+            function updateEventFee(eventType) {
+                let fee = 0;
+                switch(eventType) {
+                    case 'festival':
+                        fee = 25;
+                        break;
+                    case 'workshop':
+                        fee = 50;
+                        break;
+                    case 'concert':
+                        fee = 75;
+                        break;
+                    case 'sports':
+                        fee = 15;
+                        break;
+                    case 'charity':
+                        fee = 10;
+                        break;
+                }
+                document.getElementById('eventFee').textContent = `$${fee}`;
+                
+                // Animate the fee change
+                const feeElement = document.getElementById('eventFee');
+                feeElement.classList.remove('fade-in');
+                void feeElement.offsetWidth; // Trigger reflow
+                feeElement.classList.add('fade-in');
+            }
+            
+            // Add smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        window.scrollTo({
+                            top: target.offsetTop - 70,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+        
+        // Before unload warning
+        window.addEventListener('beforeunload', function(e) {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            
+            // Only show warning if form has been partially filled out
+            if (name || email) {
+                e.preventDefault();
+                e.returnValue = '';
+                return '';
+            }
+        });
+    </script>
+</body>
+</html>

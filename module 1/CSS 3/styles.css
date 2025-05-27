@@ -1,0 +1,503 @@
+/* Task 1: External CSS file with comments to label sections */
+
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  /* Task 4: Background with fallback color */
+  background-color: #f8f9fa;
+  background-image: url('https://source.unsplash.com/random/1600x800/?light,texture');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+/* Task 5: Typography styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Task 3: Element selector for all h2 */
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: #4a6fa5;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Task 3: Grouping selector for h3 and p */
+h3, p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* Header and Navigation */
+header {
+  background: linear-gradient(135deg, #4a6fa5, #166088);
+  color: white;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+/* Task 6: List styling */
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 1.5rem;
+}
+
+/* Task 6: Link styling with pseudo-classes */
+.nav-links a:link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:visited {
+  color: #f0f0f0;
+}
+
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.nav-links a:active {
+  background-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(1px);
+}
+
+/* Main Banner */
+#mainHeader {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+              url('https://source.unsplash.com/random/1600x800/?community,event');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 6rem 1rem;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.welcome-heading {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Task 8: Box model properties */
+.eventCard {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e0e0e0;
+}
+
+.eventCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  border-color: #4fc3f7;
+}
+
+.eventCard i {
+  font-size: 2.5rem;
+  color: #4a6fa5;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Event Cards Grid */
+.intro-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+/* Event filters styling */
+.event-filters {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.event-filters h3 {
+  margin-bottom: 1rem;
+  color: #4a6fa5;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.filter-btn {
+  background-color: #f0f0f0;
+  color: #333;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.filter-btn:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background-color: #4a6fa5;
+  color: white;
+  font-weight: 500;
+}
+
+/* Highlight */
+.highlight {
+  background-color: #4fc3f7;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+/* Sections */
+section {
+  padding: 3rem 0;
+}
+
+/* Task 7: Table styling */
+#eventsTable {
+  width: 100%;
+  margin: 2rem 0;
+  border-collapse: collapse;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+#eventsTable th, #eventsTable td {
+  padding: 12px 15px;
+  text-align: center;
+}
+
+#eventsTable th {
+  background-color: #4a6fa5;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+#eventsTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#eventsTable tr:hover {
+  background-color: #e6f7ff;
+}
+
+/* Task 9: Multi-column layout */
+.news-article {
+  margin: 3rem 0;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.multi-column-text {
+  column-count: 2;
+  column-gap: 30px;
+  column-rule: 1px solid #ddd;
+  margin-top: 1rem;
+}
+
+.multi-column-text p {
+  margin-bottom: 1rem;
+}
+
+/* Forms */
+.form-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #4fc3f7;
+  box-shadow: 0 0 0 3px rgba(79, 195, 247, 0.3);
+}
+
+/* Task 8: Outline for selected fields */
+input:focus, textarea:focus, select:focus {
+  outline: 2px solid #4fc3f7;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #4a6fa5;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #166088;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+.char-counter {
+  text-align: right;
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+
+output {
+  display: block;
+  padding: 1rem;
+  margin-top: 1rem;
+  background-color: #28a745;
+  color: white;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+/* Footer */
+footer {
+  background-color: #343a40;
+  color: white;
+  padding: 2rem 0 0.5rem;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+}
+
+.footer-section h3 {
+  margin-bottom: 0.8rem;
+  position: relative;
+  font-size: 1.1rem;
+}
+
+.footer-section p {
+  font-size: 0.9rem;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.8rem;
+}
+
+.social-links li {
+  margin: 0 0.5rem;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #4fc3f7;
+  color: white;
+  transform: translateY(-3px);
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+/* Task 8: Visibility vs Display */
+.hidden {
+  visibility: hidden; /* Takes up space but is invisible */
+}
+
+.removed {
+  display: none; /* Completely removed from layout */
+}
+
+/* Task 10: Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  /* Stack navigation links vertically */
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #4a6fa5;
+    padding: 1rem 0;
+    display: none;
+  }
+  
+  .nav-links.active {
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+  
+  /* Reduce font sizes */
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  /* Make table responsive */
+  #eventsTable {
+    display: block;
+    overflow-x: auto;
+  }
+  
+  /* Single column for multi-column text */
+  .multi-column-text {
+    column-count: 1;
+  }
+  
+  /* Adjust image sizes */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Use flexible units */
+  .container {
+    width: 95%;
+  }
+  
+  .eventCard {
+    padding: 1.5rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}

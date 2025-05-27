@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badge Overlay</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Badge Overlay on Images</h1>
+        <p class="lead mb-5">Using position-relative and position-absolute to overlay badges on images</p>
+        
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <h3>Product Card with Badge</h3>
+                <div class="card">
+                    <div class="position-relative">
+                        <img src="images/product1.svg" class="card-img-top" alt="Product Image">
+                        <span class="position-absolute top-0 start-0 badge bg-danger m-2">Sale!</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Laptop Pro</h5>
+                        <p class="card-text">Product description goes here.</p>
+                        <p class="card-text"><strong>$999</strong> <del class="text-muted">$1299</del></p>
+                        <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <h3>Corner Badge</h3>
+                <div class="position-relative">
+                    <img src="images/product2.svg" class="img-fluid rounded" alt="Image with Badge">
+                    <span class="position-absolute top-0 end-0 badge bg-success m-2">New</span>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <h3>Centered Badge</h3>
+                <div class="position-relative">
+                    <img src="images/banner.svg" class="img-fluid rounded" alt="Image with Badge">
+                    <span class="position-absolute top-50 start-50 translate-middle badge bg-warning text-dark px-3 py-2">Featured</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <h3>Profile Picture with Status</h3>
+                <div class="position-relative d-inline-block">
+                    <img src="images/profile1.svg" class="rounded-circle" width="150" height="150" alt="Profile Picture">
+                    <span class="position-absolute bottom-0 end-0 badge rounded-circle bg-success p-2 border border-light border-2">
+                        <span class="visually-hidden">Online</span>
+                    </span>
+                </div>
+                <h5 class="mt-2">John Doe</h5>
+                <p class="text-muted">Web Developer</p>
+            </div>
+            
+            <div class="col-md-6 mb-4">
+                <h3>Notification Badge</h3>
+                <div class="position-relative d-inline-block">
+                    <button class="btn btn-primary btn-lg">
+                        Messages
+                    </button>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        9+
+                        <span class="visually-hidden">unread messages</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12 mb-4">
+                <h3>Gallery with Badges</h3>
+                <div class="row">
+                    <div class="col-md-3 mb-3">
+                        <div class="position-relative">
+                            <img src="images/gallery1.svg" class="img-fluid rounded" alt="Gallery Image">
+                            <span class="position-absolute bottom-0 start-0 badge bg-dark m-2">Nature</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="position-relative">
+                            <img src="images/gallery2.svg" class="img-fluid rounded" alt="Gallery Image">
+                            <span class="position-absolute bottom-0 start-0 badge bg-dark m-2">Travel</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="position-relative">
+                            <img src="images/gallery3.svg" class="img-fluid rounded" alt="Gallery Image">
+                            <span class="position-absolute bottom-0 start-0 badge bg-dark m-2">Food</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="position-relative">
+                            <img src="images/gallery4.svg" class="img-fluid rounded" alt="Gallery Image">
+                            <span class="position-absolute bottom-0 start-0 badge bg-dark m-2">Architecture</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

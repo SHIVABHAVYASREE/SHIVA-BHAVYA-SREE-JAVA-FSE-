@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help - Local Community Event Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .help-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .help-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--accent-color);
+        }
+        
+        .help-section {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .help-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .help-section h2 i {
+            margin-right: 0.5rem;
+            color: var(--accent-color);
+        }
+        
+        .help-section ol, .help-section ul {
+            margin-left: 2rem;
+        }
+        
+        .help-section li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 1.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .back-link:hover {
+            color: var(--secondary-color);
+            transform: translateX(-5px);
+        }
+        
+        .back-link i {
+            margin-right: 0.5rem;
+        }
+        
+        .faq-item {
+            margin-bottom: 1rem;
+        }
+        
+        .faq-question {
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">CommunityEvents</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Back to Portal</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section style="background-color: #f0f5fa;">
+        <div class="container">
+            <div class="help-container">
+                <div class="help-header">
+                    <h1><i class="fas fa-question-circle"></i> Help Center</h1>
+                    <p>Find answers to common questions about using the Community Event Portal</p>
+                </div>
+                
+                <div class="help-section">
+                    <h2><i class="fas fa-search"></i> Finding Events</h2>
+                    <p>Browse through our events section to find upcoming community activities. You can use the "Find Nearby Events" feature to locate events close to your current location.</p>
+                    
+                    <div class="faq-item">
+                        <p class="faq-question">How do I find events near me?</p>
+                        <p>Click on the "Find Nearby Events" button on the homepage. The system will request permission to access your location. Once granted, it will display events in your vicinity.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <p class="faq-question">Can I search for specific types of events?</p>
+                        <p>Yes, you can filter events by type using the dropdown menu in the Events section.</p>
+                    </div>
+                </div>
+                
+                <div class="help-section">
+                    <h2><i class="fas fa-clipboard-list"></i> Registration Process</h2>
+                    <p>To register for an event:</p>
+                    <ol>
+                        <li>Navigate to the Events section</li>
+                        <li>Fill out the registration form with your details</li>
+                        <li>Select the event type you're interested in</li>
+                        <li>Submit the form</li>
+                        <li>You'll receive a confirmation message on the page</li>
+                    </ol>
+                    
+                    <div class="faq-item">
+                        <p class="faq-question">Is my personal information secure?</p>
+                        <p>Yes, all personal information is encrypted and stored securely. We never share your information with third parties without your consent.</p>
+                    </div>
+                </div>
+                
+                <div class="help-section">
+                    <h2><i class="fas fa-user-cog"></i> User Preferences</h2>
+                    <p>The portal remembers your preferred event type for future visits. If you want to clear your saved preferences, use the "Clear Preferences" button on the registration form.</p>
+                    
+                    <div class="faq-item">
+                        <p class="faq-question">What information is saved in my browser?</p>
+                        <p>We store your preferred event type in your browser's local storage. This helps personalize your experience when you return to the portal.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <p class="faq-question">How do I clear my saved preferences?</p>
+                        <p>Click the "Clear Preferences" button on the registration form to remove all saved data.</p>
+                    </div>
+                </div>
+                
+                <div class="help-section">
+                    <h2><i class="fas fa-headset"></i> Contact Support</h2>
+                    <p>If you need additional help, please use the Contact form to send us a message. We'll respond to your inquiry as soon as possible.</p>
+                    
+                    <div class="faq-item">
+                        <p class="faq-question">What is the typical response time?</p>
+                        <p>We aim to respond to all inquiries within 24-48 hours during business days.</p>
+                    </div>
+                </div>
+                
+                <div class="help-section">
+                    <h2><i class="fas fa-tools"></i> Troubleshooting</h2>
+                    <p>Common issues and their solutions:</p>
+                    <ul>
+                        <li><strong>Images not loading:</strong> Check your internet connection or try refreshing the page.</li>
+                        <li><strong>Location services not working:</strong> Ensure you've granted location permissions in your browser.</li>
+                        <li><strong>Form submission errors:</strong> Make sure all required fields are completed correctly.</li>
+                    </ul>
+                </div>
+                
+                <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Portal</a>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="copyright">
+            <p>&copy; 2023 Local Community Event Portal. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

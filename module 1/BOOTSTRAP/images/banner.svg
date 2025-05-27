@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <rect width="800" height="400" fill="#3498db"/>
+  <rect x="0" y="300" width="800" height="100" fill="#2980b9"/>
+  <circle cx="650" cy="100" r="60" fill="#f1c40f"/>
+  <polygon points="650,50 670,90 730,90 680,120 700,170 650,140 600,170 620,120 570,90 630,90" fill="#f39c12"/>
+  <text x="400" y="200" font-family="Arial" font-size="48" text-anchor="middle" fill="#ffffff">Beautiful Landscape</text>
+  <text x="400" y="250" font-family="Arial" font-size="24" text-anchor="middle" fill="#ffffff">Nature at its finest</text>
+</svg>

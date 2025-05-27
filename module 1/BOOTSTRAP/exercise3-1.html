@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Responsive Grid</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .demo-col {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Responsive Grid Layout</h1>
+        <p class="lead">Columns stack on mobile, 2-per-row on tablets, 3-per-row on desktops</p>
+        
+        <div class="row">
+            <!-- These columns will stack on mobile (xs), show 2-per-row on tablets (md), and 3-per-row on desktops (lg) -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="demo-col">Column 1</div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="demo-col">Column 2</div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="demo-col">Column 3</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

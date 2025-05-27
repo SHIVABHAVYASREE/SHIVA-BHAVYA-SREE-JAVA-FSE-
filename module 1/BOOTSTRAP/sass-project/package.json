@@ -1,0 +1,24 @@
+{
+  "name": "bootstrap-sass-customization",
+  "version": "1.0.0",
+  "description": "Bootstrap 5 customization with Sass",
+  "main": "index.js",
+  "scripts": {
+    "css-compile": "sass scss/custom.scss css/custom-bootstrap.css",
+    "css-watch": "sass --watch scss/custom.scss css/custom-bootstrap.css",
+    "css-minify": "sass scss/custom.scss css/custom-bootstrap.min.css --style compressed"
+  },
+  "keywords": [
+    "bootstrap",
+    "sass",
+    "css"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.0"
+  },
+  "devDependencies": {
+    "sass": "^1.62.0"
+  }
+}

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Community Event Portal</title>
+    <!-- Internal CSS - Task 1: Embedded style tag -->
+    <style>
+        /* Task 1: Use an embedded style tag to define body background */
+        body {
+            background-color: #f8f9fa;
+        }
+    </style>
+    <!-- Task 1: Link external stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
+    <!-- Task 5: Google Font import -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">CommunityEvents</a>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#register">Register</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="help.html" target="_blank">Help</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home">
+            <!-- Task 1: Inline style to make heading red -->
+            <div id="mainHeader" class="gradient-bg">
+                <div class="container">
+                    <h1 class="welcome-heading" style="color: red;">Welcome to the Community Event Portal</h1>
+                    <p data-aos="fade-up" data-aos-delay="300">Find and register for exciting local events in your area.</p>
+                    <p class="special-offer float" data-aos="zoom-in" data-aos-delay="600">Special offer: Register today and get a free gift!</p>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="intro-cards">
+                    <div class="eventCard card-hover" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h3>Discover Events</h3>
+                        <p>Browse through our curated collection of local community events.</p>
+                    </div>
+                    <div class="eventCard card-hover" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-ticket-alt"></i>
+                        <h3>Easy Registration</h3>
+                        <p>Quick and simple event registration process for all residents.</p>
+                    </div>
+                    <div class="eventCard card-hover" data-aos="fade-up" data-aos-delay="500">
+                        <i class="fas fa-users"></i>
+                        <h3>Connect</h3>
+                        <p>Meet like-minded people and build community connections.</p>
+                    </div>
+                </div>
+                
+                <p data-aos="fade-up">Our portal helps residents connect with <span class="highlight">local events</span> and services.</p>
+                
+                <div class="location-container" data-aos="fade-up">
+                    <button id="findNearbyEvents" class="btn btn-hover-effect ripple">
+                        <i class="fas fa-map-marker-alt"></i> Find Nearby Events
+                    </button>
+                    <div id="locationDisplay"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Events Section -->
+        <section id="events">
+            <div class="container">
+                <div class="event-filters" data-aos="fade-up">
+                    <h3>Filter Events</h3>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">All Events</button>
+                        <button class="filter-btn" data-filter="festival">Festivals</button>
+                        <button class="filter-btn" data-filter="art">Art</button>
+                        <button class="filter-btn" data-filter="food">Food</button>
+                        <button class="filter-btn" data-filter="music">Music</button>
+                        <button class="filter-btn" data-filter="sports">Sports</button>
+                        <button class="filter-btn" data-filter="charity">Charity</button>
+                    </div>
+                </div>
+                
+                <h2>Community Events</h2>
+                
+                <!-- Task 7: Table Styling -->
+                <table id="eventsTable">
+                    <thead>
+                        <tr>
+                            <th>Event Name</th>
+                            <th>Date</th>
+                            <th>Location</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Summer Festival</td>
+                            <td>June 15</td>
+                            <td>Central Park</td>
+                            <td>Festival</td>
+                            <td>$25</td>
+                        </tr>
+                        <tr>
+                            <td>Art Exhibition</td>
+                            <td>July 22</td>
+                            <td>City Gallery</td>
+                            <td>Art</td>
+                            <td>$10</td>
+                        </tr>
+                        <tr>
+                            <td>Food Fair</td>
+                            <td>August 5</td>
+                            <td>Riverside Plaza</td>
+                            <td>Food</td>
+                            <td>$15</td>
+                        </tr>
+                        <tr>
+                            <td>Music Concert</td>
+                            <td>September 18</td>
+                            <td>Community Hall</td>
+                            <td>Music</td>
+                            <td>$35</td>
+                        </tr>
+                        <tr>
+                            <td>Sports Day</td>
+                            <td>October 9</td>
+                            <td>Sports Complex</td>
+                            <td>Sports</td>
+                            <td>$5</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="gallery stagger-reveal" id="eventGallery">
+                    <div class="gallery-item eventCard" data-aos="fade-up">
+                        <div class="event-date">
+                            <span class="month">JUN</span>
+                            <span class="day">15</span>
+                        </div>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0eIzp87I7U5RQZMuNYkVA698HeHgEJ1rHTA&s" alt="Summer Festival" class="event-image">
+                        <div class="gallery-caption">
+                            <h3>Summer Festival</h3>
+                            <p>Annual celebration with music, food, and activities for all ages.</p>
+                            <div class="event-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Central Park</span>
+                                <span><i class="fas fa-clock"></i> 10:00 AM - 8:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- More gallery items... -->
+                </div>
+                
+                <!-- Task 9: Multiple Columns in Text -->
+                <div class="news-article">
+                    <h3>Community Bulletin</h3>
+                    <div class="multi-column-text">
+                        <p>Welcome to our community bulletin! Here you'll find the latest news and updates about upcoming events and community initiatives. We're excited to announce several new programs launching this month to engage residents of all ages.</p>
+                        
+                        <p>The summer festival planning committee is looking for volunteers to help organize this year's event. If you're interested in contributing your time and talents, please contact the community center.</p>
+                        
+                        <p>Our local artists collective will be hosting workshops every Saturday this month. These sessions are open to beginners and experienced artists alike. Materials will be provided for first-time attendees.</p>
+                        
+                        <p>The community garden project has been a huge success! Thanks to all volunteers who helped plant and maintain the garden. Fresh produce is now available for community members every Sunday morning.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Registration Section -->
+        <section id="register" style="background-color: #f0f5fa;">
+            <div class="container">
+                <h2>Event Registration</h2>
+                
+                <div class="form-container">
+                    <form id="registrationForm">
+                        <div class="form-group">
+                            <label for="name">Full Name:</label>
+                            <input type="text" id="name" name="name" required autofocus>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number:</label>
+                            <input type="tel" id="phone" name="phone" placeholder="123-456-7890">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="date">Event Date:</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="eventType">Event Type:</label>
+                            <select id="eventType" name="eventType" required>
+                                <option value="">-- Select Event Type --</option>
+                                <option value="festival">Festival</option>
+                                <option value="workshop">Workshop</option>
+                                <option value="concert">Concert</option>
+                                <option value="sports">Sports</option>
+                                <option value="charity">Charity</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Additional Information:</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Any special requirements or questions?"></textarea>
+                            <div class="char-counter">Characters: <span id="charCount">0</span></div>
+                        </div>
+                        
+                        <div class="fee-display">
+                            <p>Event Fee: <span id="eventFee">$0</span></p>
+                        </div>
+                        
+                        <div class="form-group" style="display: flex; gap: 10px;">
+                            <button type="submit" id="submitBtn" class="btn">Register Now</button>
+                            <button type="button" id="clearPreferences" class="btn btn-secondary">Clear Preferences</button>
+                        </div>
+                        
+                        <output id="formOutput"></output>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                
+                <div class="form-container">
+                    <form id="feedbackForm">
+                        <div class="form-group">
+                            <label for="feedbackName">Your Name:</label>
+                            <input type="text" id="feedbackName" name="feedbackName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="feedbackEmail">Email Address:</label>
+                            <input type="email" id="feedbackEmail" name="feedbackEmail" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="feedbackMessage">Your Message:</label>
+                            <textarea id="feedbackMessage" name="feedbackMessage" rows="4" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="submit" class="btn">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section" data-aos="fade-up" data-aos-delay="100">
+                <h3>About Us</h3>
+                <p>We connect local residents with community events and services to build a stronger, more engaged community.</p>
+            </div>
+            
+            <div class="footer-section" data-aos="fade-up" data-aos-delay="200">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#register">Register</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section" data-aos="fade-up" data-aos-delay="300">
+                <h3>Connect With Us</h3>
+                <ul class="social-links">
+                    <li><a href="#" class="social-icon"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#" class="social-icon"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#" class="social-icon"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2025 Local Community Event Portal. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                easing: 'ease',
+                once: true
+            });
+            
+            // Activate scroll animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            });
+            
+            document.querySelectorAll('.stagger-reveal, .reveal').forEach(el => {
+                observer.observe(el);
+            });
+            
+            // Load saved preferences
+            const savedEventType = localStorage.getItem('preferredEventType');
+            if (savedEventType) {
+                document.getElementById('eventType').value = savedEventType;
+                updateEventFee(savedEventType);
+            }
+            
+            // Event filtering
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    // Show/hide gallery items based on filter
+                    galleryItems.forEach(item => {
+                        if (filterValue === 'all') {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'scale(1)';
+                            }, 100);
+                        } else {
+                            // Check if item has the filter class
+                            const itemType = item.querySelector('img').getAttribute('alt').toLowerCase();
+                            if (itemType.includes(filterValue)) {
+                                item.style.display = 'block';
+                                setTimeout(() => {
+                                    item.style.opacity = '1';
+                                    item.style.transform = 'scale(1)';
+                                }, 100);
+                            } else {
+                                item.style.opacity = '0';
+                                item.style.transform = 'scale(0.8)';
+                                setTimeout(() => {
+                                    item.style.display = 'none';
+                                }, 300);
+                            }
+                        }
+                    });
+                });
+            });
+            
+            // Phone validation on blur
+            document.getElementById('phone').addEventListener('blur', function() {
+                const phonePattern = /^\d{3}-\d{3}-\d{4}$/;
+                if (!phonePattern.test(this.value) && this.value !== '') {
+                    alert('Please enter phone number in format: 123-456-7890');
+                    this.classList.add('error');
+                } else {
+                    this.classList.remove('error');
+                }
+            });
+            
+            // Event type change handler
+            document.getElementById('eventType').addEventListener('change', function() {
+                const selectedEventType = this.value;
+                localStorage.setItem('preferredEventType', selectedEventType);
+                updateEventFee(selectedEventType);
+            });
+            
+            // Character counter for message textarea
+            document.getElementById('message').addEventListener('keyup', function() {
+                const count = this.value.length;
+                document.getElementById('charCount').textContent = count;
+                
+                // Visual feedback on character count
+                if (count > 200) {
+                    document.getElementById('charCount').style.color = '#dc3545';
+                } else {
+                    document.getElementById('charCount').style.color = '#6c757d';
+                }
+            });
+            
+            // Form submission handler
+            document.getElementById('registrationForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const name = document.getElementById('name').value;
+                const output = document.getElementById('formOutput');
+                output.textContent = `Thank you, ${name}! Your registration has been received.`;
+                output.style.display = 'block';
+                
+                // Scroll to the output message
+                output.scrollIntoView({ behavior: 'smooth' });
+            });
+            
+            // Function to update event fee based on selection
+            function updateEventFee(eventType) {
+                let fee = 0;
+                switch(eventType) {
+                    case 'festival':
+                        fee = 25;
+                        break;
+                    case 'workshop':
+                        fee = 50;
+                        break;
+                    case 'concert':
+                        fee = 75;
+                        break;
+                    case 'sports':
+                        fee = 15;
+                        break;
+                    case 'charity':
+                        fee = 10;
+                        break;
+                }
+                document.getElementById('eventFee').textContent = `$${fee}`;
+                
+                // Animate the fee change
+                const feeElement = document.getElementById('eventFee');
+                feeElement.classList.remove('fade-in');
+                void feeElement.offsetWidth; // Trigger reflow
+                feeElement.classList.add('fade-in');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadows and Rounded Pills</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Shadows and Rounded Pills</h1>
+        <p class="lead mb-5">Using shadow, shadow-lg and rounded-pill in cards</p>
+        
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Regular Shadow</h5>
+                        <p class="card-text">This card has a regular shadow effect applied using the shadow class.</p>
+                        <a href="#" class="btn btn-primary rounded-pill">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Small Shadow</h5>
+                        <p class="card-text">This card has a smaller shadow effect applied using the shadow-sm class.</p>
+                        <a href="#" class="btn btn-success rounded-pill">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title">Large Shadow</h5>
+                        <p class="card-text">This card has a larger shadow effect applied using the shadow-lg class.</p>
+                        <a href="#" class="btn btn-danger rounded-pill">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card shadow rounded-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Rounded Corners with Shadow</h5>
+                        <p class="card-text">This card combines shadow with rounded-3 for more rounded corners.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                            </div>
+                            <span class="badge bg-primary rounded-pill">New</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-lg rounded-pill">
+                    <div class="card-body p-4">
+                        <h5 class="card-title">Pill Card with Large Shadow</h5>
+                        <p class="card-text">This card uses rounded-pill to create a pill shape with a large shadow.</p>
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary rounded-pill" type="button">Button</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12 mb-4">
+                <div class="p-5 mb-4 bg-light rounded-3 shadow">
+                    <div class="container-fluid py-5">
+                        <h1 class="display-5 fw-bold">Custom jumbotron</h1>
+                        <p class="col-md-8 fs-4">Using a combination of shadow and rounded-3 utility classes to create a jumbotron-like component.</p>
+                        <button class="btn btn-primary btn-lg rounded-pill" type="button">Example button</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&h=300&fit=crop" class="card-img-top" alt="Card image">
+                    <div class="card-body">
+                        <h5 class="card-title">Card with Image</h5>
+                        <p class="card-text">This card combines shadow-lg with an image.</p>
+                        <div class="d-grid">
+                            <button class="btn btn-outline-primary rounded-pill" type="button">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="card border-0 shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Borderless Card</h5>
+                        <p class="card-text">This card has no border (border-0) but uses shadow for definition.</p>
+                        <span class="badge bg-warning text-dark rounded-pill px-3 py-2">Featured</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="card border-primary shadow-sm">
+                    <div class="card-header bg-primary text-white rounded-pill">
+                        Featured
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Card with Pill Header</h5>
+                        <p class="card-text">This card has a rounded-pill header with a small shadow.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

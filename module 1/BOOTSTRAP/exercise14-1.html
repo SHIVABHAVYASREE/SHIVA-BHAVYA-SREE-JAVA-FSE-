@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display and Visibility</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .demo-box {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Display and Visibility Utilities</h1>
+        <p class="lead mb-5">Using d-none, d-md-block, d-lg-flex to control visibility based on screen size</p>
+        
+        <div class="demo-box">
+            <h3>Always Visible Content</h3>
+            <p>This content is visible on all screen sizes.</p>
+        </div>
+        
+        <!-- Hidden on all screens -->
+        <div class="demo-box d-none">
+            <h3>Always Hidden Content</h3>
+            <p>This content is hidden on all screen sizes (d-none).</p>
+        </div>
+        
+        <!-- Hidden on small screens, visible from medium screens up -->
+        <div class="demo-box d-none d-md-block">
+            <h3>Hidden on Small, Visible on Medium+</h3>
+            <p>This content is hidden on small screens but visible on medium screens and up (d-none d-md-block).</p>
+            <p>Resize your browser to see it disappear on small screens.</p>
+        </div>
+        
+        <!-- Visible only on small screens -->
+        <div class="demo-box d-block d-md-none">
+            <h3>Small Screens Only</h3>
+            <p>This content is only visible on small screens (d-block d-md-none).</p>
+            <p>Resize your browser to see it disappear on medium screens and up.</p>
+        </div>
+        
+        <!-- Display as flex on large screens -->
+        <div class="demo-box d-none d-lg-flex justify-content-between align-items-center">
+            <div>
+                <h3>Flex Layout on Large Screens</h3>
+                <p>This content uses d-none d-lg-flex to display as flex only on large screens.</p>
+            </div>
+            <button class="btn btn-primary">Action Button</button>
+        </div>
+        
+        <!-- Different display types based on screen size -->
+        <div class="demo-box d-block d-md-inline-block d-lg-flex">
+            <div class="p-2">
+                <h4>Multi-Display Content</h4>
+                <p>This changes from block to inline-block to flex as screen size increases.</p>
+            </div>
+            <div class="p-2">
+                <button class="btn btn-secondary">Secondary Action</button>
+            </div>
+        </div>
+        
+        <!-- Responsive visibility for images -->
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <h3>Responsive Image Visibility</h3>
+                <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&h=400&fit=crop" alt="Large Banner" class="img-fluid d-none d-md-block">
+                <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=400&h=300&fit=crop" alt="Small Banner" class="img-fluid d-block d-md-none">
+                <p class="mt-2">The image above changes based on screen size.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
